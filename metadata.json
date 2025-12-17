@@ -1,0 +1,5 @@
+{
+  "name": "ManuscriptMint",
+  "description": "An AI-powered academic editorial assistant that reviews manuscripts for style, compliance, and citation risks without generating new content.",
+  "requestFramePermissions": []
+}

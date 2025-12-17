@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ManuscriptMint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Merriweather', 'serif'],
+            },
+            colors: {
+              brand: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                900: '#0c4a6e',
+              }
+            },
+            boxShadow: {
+              'page': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0,0,0,0.05)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar for cleaner UI */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+
+      /* Editor Content Specific Styles */
+      .editor-content {
+        outline: none;
+        /* Ensure font rendering is crisp */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* APA 7 Style Simulation within Editor */
+      .editor-content h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        line-height: 1.2;
+      }
+      
+      .editor-content h2 {
+        font-size: 1.25em;
+        font-weight: bold;
+        text-align: left;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        line-height: 1.3;
+      }
+
+      .editor-content h3 {
+        font-size: 1.1em;
+        font-weight: bold;
+        font-style: italic;
+        text-align: left;
+        margin-bottom: 0.25em;
+      }
+
+      .editor-content p {
+        margin-bottom: 1em;
+        line-height: 1.8; /* Slightly adjusted for better A4 fit */
+      }
+      
+      .editor-content blockquote {
+        border-left: 3px solid #cbd5e1;
+        padding-left: 1rem;
+        margin-left: 1rem;
+        color: #475569;
+        font-style: italic;
+      }
+      
+      .editor-content ul, .editor-content ol {
+        margin-left: 1.5em;
+        margin-bottom: 1em;
+      }
+      
+      .editor-content ul { list-style-type: disc; }
+      .editor-content ol { list-style-type: decimal; }
+
+      /* Prevent images from overflowing the A4 page width */
+      .editor-content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1em auto;
+      }
+
+      /* AI Highlight Styles */
+      .ai-highlight {
+        background-color: #fef08a; /* yellow-200 */
+        border-bottom: 2px solid #eab308; /* yellow-500 */
+        cursor: pointer;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 text-slate-800 h-screen overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>
